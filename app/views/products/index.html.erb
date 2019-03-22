@@ -1,0 +1,9 @@
+<!-- <form class="" action="add_to_cart" method="post">
+  <input type="text" name="product" value="">
+  <input type="submit" name="" value="add to cart">
+</form> -->
+Your cart: <%= cart %>
+<%= form_tag("/add_to_cart", method: :post) do %>
+<%= text_field_tag 'product' %>
+<%= submit_tag 'add to cart' %>
+<% end %>
